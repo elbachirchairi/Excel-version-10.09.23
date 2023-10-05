@@ -71,6 +71,7 @@ class MyApp(QtWidgets.QMainWindow):
         self.toolButton_3.clicked.connect(self.input_file2)
         self.toolButton_4.clicked.connect(self.output_file)
 
+    
     def output_file(self):
         import openpyxl
 
