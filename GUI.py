@@ -467,7 +467,7 @@ class MyApp(QtWidgets.QMainWindow):
                     Rectifier[i] = "SANS MAFI"
                 row = self.tableWidget_2.rowCount()
                 self.tableWidget_2.insertRow(row)
-                item_mafi = QTableWidgetItem(str(MAFI[i]))
+                item_mafi = QTableWidgetItem(str(int(MAFI[i])))
                 item_mafi.setTextAlignment(Qt.AlignCenter)
                 self.tableWidget_2.setItem(row, 0, item_mafi)
                 item_unit = QTableWidgetItem(str(Unit[i]))
@@ -530,7 +530,7 @@ class MyApp(QtWidgets.QMainWindow):
                     Rectifier[i] = "SANS MAFI"
                 row = self.tableWidget.rowCount()
                 self.tableWidget.insertRow(row)
-                item_mafi = QTableWidgetItem(str(MAFI[i]))
+                item_mafi = QTableWidgetItem(str(int(MAFI[i])))
                 item_mafi.setTextAlignment(Qt.AlignCenter)
                 self.tableWidget.setItem(row, 0, item_mafi)
                 item_unit = QTableWidgetItem(str(Unit[i]))
@@ -588,7 +588,7 @@ class MyApp(QtWidgets.QMainWindow):
         # mise à jour de la comboBox avec les navires existants
         self.comboBox.clear()
         item1 = QIcon("src/img/navire.png")
-        data = pd.read_excel("src/doc/NAVIRE.xlsx", engine='openpyxl')
+        data = pd.read_excel("src/doc/NAVIRE.xlsx")
         navire_list = data['NAVIRE'].tolist()
         for i, navire in enumerate(navire_list):
             self.comboBox.addItem(str(navire))
