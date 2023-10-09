@@ -20,7 +20,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../img/exceller (1).png</normaloff>../img/exceller (1).png</iconset>
+    <normaloff>../../../Excel  version-10.03.23 - Copie/src/img/exceller (1).png</normaloff>../../../Excel  version-10.03.23 - Copie/src/img/exceller (1).png</iconset>
   </property>
   <property name="windowOpacity">
    <double>2.000000000000000</double>
@@ -504,7 +504,7 @@ color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../img/navire.png</normaloff>../img/navire.png</iconset>
+                      <normaloff>../../../Excel  version-10.03.23 - Copie/src/img/navire.png</normaloff>../../../Excel  version-10.03.23 - Copie/src/img/navire.png</iconset>
                     </property>
                    </item>
                   </widget>
@@ -635,7 +635,72 @@ color: rgb(0, 0, 0);</string>
                  <enum>QFrame::Sunken</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_3">
-                 <item row="0" column="0" colspan="3">
+                 <item row="1" column="2">
+                  <widget class="QPushButton" name="pushButton_2">
+                   <property name="maximumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>../icons/icons8-subtraction-96.png</normaloff>../icons/icons8-subtraction-96.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>16</width>
+                     <height>16</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <spacer name="horizontalSpacer_3">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>253</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QPushButton" name="pushButton">
+                   <property name="minimumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>../icons/icons8-plus-96.png</normaloff>../icons/icons8-plus-96.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>16</width>
+                     <height>16</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0" colspan="4">
                   <widget class="QTableWidget" name="tableWidget">
                    <property name="font">
                     <font>
@@ -733,33 +798,6 @@ alternate-background-color: rgb(255,248,220);</string>
                      <string>OBSERVATIONS</string>
                     </property>
                    </column>
-                  </widget>
-                 </item>
-                 <item row="1" column="0">
-                  <spacer name="horizontalSpacer_3">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>253</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item row="1" column="1">
-                  <widget class="QPushButton" name="pushButton_2">
-                   <property name="text">
-                    <string>Romove line</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="2">
-                  <widget class="QPushButton" name="pushButton">
-                   <property name="text">
-                    <string>Add line</string>
-                   </property>
                   </widget>
                  </item>
                 </layout>
@@ -1172,7 +1210,7 @@ color: rgb(0, 0, 0);</string>
                     </property>
                     <property name="icon">
                      <iconset>
-                      <normaloff>../img/navire.png</normaloff>../img/navire.png</iconset>
+                      <normaloff>../../../Excel  version-10.03.23 - Copie/src/img/navire.png</normaloff>../../../Excel  version-10.03.23 - Copie/src/img/navire.png</iconset>
                     </property>
                    </item>
                   </widget>
@@ -1316,7 +1354,54 @@ color: rgb(0, 0, 0);</string>
                  <enum>QFrame::Sunken</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_4">
-                 <item row="0" column="0" colspan="3">
+                 <item row="1" column="2">
+                  <widget class="QPushButton" name="pushButton_3">
+                   <property name="maximumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>../icons/icons8-subtraction-96.png</normaloff>../icons/icons8-subtraction-96.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <spacer name="horizontalSpacer_4">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>253</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QPushButton" name="pushButton_4">
+                   <property name="maximumSize">
+                    <size>
+                     <width>20</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset>
+                     <normaloff>../icons/icons8-plus-96.png</normaloff>../icons/icons8-plus-96.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0" colspan="4">
                   <widget class="QTableWidget" name="tableWidget_2">
                    <property name="font">
                     <font>
@@ -1414,33 +1499,6 @@ alternate-background-color: rgb(255,248,220);</string>
                      <string>OBSERVATIONS</string>
                     </property>
                    </column>
-                  </widget>
-                 </item>
-                 <item row="1" column="0">
-                  <spacer name="horizontalSpacer_4">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>253</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item row="1" column="1">
-                  <widget class="QPushButton" name="pushButton_3">
-                   <property name="text">
-                    <string>Romove line</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="2">
-                  <widget class="QPushButton" name="pushButton_4">
-                   <property name="text">
-                    <string>Add line</string>
-                   </property>
                   </widget>
                  </item>
                 </layout>
@@ -1582,7 +1640,7 @@ alternate-background-color: rgb(255,248,220);</string>
   <action name="actionEnregestrer_sous">
    <property name="icon">
     <iconset>
-     <normaloff>../img/save_as.png</normaloff>../img/save_as.png</iconset>
+     <normaloff>../../../Excel  version-10.03.23 - Copie/src/img/save_as.png</normaloff>../../../Excel  version-10.03.23 - Copie/src/img/save_as.png</iconset>
    </property>
    <property name="text">
     <string>Save As</string>
@@ -1594,7 +1652,7 @@ alternate-background-color: rgb(255,248,220);</string>
   <action name="actionEnregestrer">
    <property name="icon">
     <iconset>
-     <normaloff>../img/save.png</normaloff>../img/save.png</iconset>
+     <normaloff>../../../Excel  version-10.03.23 - Copie/src/img/save.png</normaloff>../../../Excel  version-10.03.23 - Copie/src/img/save.png</iconset>
    </property>
    <property name="text">
     <string>Save</string>
@@ -1603,7 +1661,7 @@ alternate-background-color: rgb(255,248,220);</string>
   <action name="actionNew">
    <property name="icon">
     <iconset>
-     <normaloff>../img/new_file.png</normaloff>../img/new_file.png</iconset>
+     <normaloff>../../../Excel  version-10.03.23 - Copie/src/img/new_file.png</normaloff>../../../Excel  version-10.03.23 - Copie/src/img/new_file.png</iconset>
    </property>
    <property name="text">
     <string>New</string>
@@ -1612,7 +1670,7 @@ alternate-background-color: rgb(255,248,220);</string>
   <action name="actionOpen">
    <property name="icon">
     <iconset>
-     <normaloff>../img/open_file.png</normaloff>../img/open_file.png</iconset>
+     <normaloff>../../../Excel  version-10.03.23 - Copie/src/img/open_file.png</normaloff>../../../Excel  version-10.03.23 - Copie/src/img/open_file.png</iconset>
    </property>
    <property name="text">
     <string>Open</string>
@@ -1621,7 +1679,7 @@ alternate-background-color: rgb(255,248,220);</string>
   <action name="actionQuiter">
    <property name="icon">
     <iconset>
-     <normaloff>../icons/remove_1828851.png</normaloff>../icons/remove_1828851.png</iconset>
+     <normaloff>../../../Excel  version-10.03.23 - Copie/src/icons/remove_1828851.png</normaloff>../../../Excel  version-10.03.23 - Copie/src/icons/remove_1828851.png</iconset>
    </property>
    <property name="text">
     <string>Quit</string>
@@ -1630,7 +1688,7 @@ alternate-background-color: rgb(255,248,220);</string>
   <action name="actionHelp">
    <property name="icon">
     <iconset>
-     <normaloff>../img/help_box.png</normaloff>../img/help_box.png</iconset>
+     <normaloff>../../../Excel  version-10.03.23 - Copie/src/img/help_box.png</normaloff>../../../Excel  version-10.03.23 - Copie/src/img/help_box.png</iconset>
    </property>
    <property name="text">
     <string>Aide</string>
@@ -1639,7 +1697,7 @@ alternate-background-color: rgb(255,248,220);</string>
   <action name="actionSave_As">
    <property name="icon">
     <iconset>
-     <normaloff>../img/save_as.png</normaloff>../img/save_as.png</iconset>
+     <normaloff>../../../Excel  version-10.03.23 - Copie/src/img/save_as.png</normaloff>../../../Excel  version-10.03.23 - Copie/src/img/save_as.png</iconset>
    </property>
    <property name="text">
     <string>Save As</string>
@@ -1648,7 +1706,7 @@ alternate-background-color: rgb(255,248,220);</string>
   <action name="actionAjouter_navire">
    <property name="icon">
     <iconset>
-     <normaloff>../img/navire.png</normaloff>../img/navire.png</iconset>
+     <normaloff>../../../Excel  version-10.03.23 - Copie/src/img/navire.png</normaloff>../../../Excel  version-10.03.23 - Copie/src/img/navire.png</iconset>
    </property>
    <property name="text">
     <string>Navire</string>
@@ -1662,7 +1720,7 @@ alternate-background-color: rgb(255,248,220);</string>
   <action name="actionClear">
    <property name="icon">
     <iconset>
-     <normaloff>../img/cleaning.png</normaloff>../img/cleaning.png</iconset>
+     <normaloff>../../../Excel  version-10.03.23 - Copie/src/img/cleaning.png</normaloff>../../../Excel  version-10.03.23 - Copie/src/img/cleaning.png</iconset>
    </property>
    <property name="text">
     <string>Clear</string>
@@ -1671,7 +1729,7 @@ alternate-background-color: rgb(255,248,220);</string>
   <action name="actionnavire">
    <property name="icon">
     <iconset>
-     <normaloff>../img/navire.png</normaloff>../img/navire.png</iconset>
+     <normaloff>../../../Excel  version-10.03.23 - Copie/src/img/navire.png</normaloff>../../../Excel  version-10.03.23 - Copie/src/img/navire.png</iconset>
    </property>
    <property name="text">
     <string>navire</string>
@@ -1680,7 +1738,7 @@ alternate-background-color: rgb(255,248,220);</string>
   <action name="actionAide">
    <property name="icon">
     <iconset>
-     <normaloff>../img/help_box.png</normaloff>../img/help_box.png</iconset>
+     <normaloff>../../../Excel  version-10.03.23 - Copie/src/img/help_box.png</normaloff>../../../Excel  version-10.03.23 - Copie/src/img/help_box.png</iconset>
    </property>
    <property name="text">
     <string>Aide </string>
