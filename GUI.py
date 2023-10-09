@@ -58,6 +58,7 @@ class MyApp(QtWidgets.QMainWindow):
         self.tableWidget_2.setColumnWidth(0, 70)
         self.tableWidget_2.setColumnWidth(1, 140)
         self.update_navire_list()
+        #self.count_non_empty_cells()
         current_date = QDate.currentDate()
         self.dateEdit_2.setDate(current_date)
         self.dateEdit_3.setDate(current_date)
@@ -70,7 +71,98 @@ class MyApp(QtWidgets.QMainWindow):
         self.actionEnregestrer_sous.triggered.connect(self.Excel1)
         self.toolButton_3.clicked.connect(self.input_file2)
         self.toolButton_4.clicked.connect(self.output_file)
+        self.pushButton.clicked.connect(self.addlin)
+        self.pushButton_2.clicked.connect(self.romovlin)
+        self.pushButton_4.clicked.connect(self.addlin1)
+        self.pushButton_3.clicked.connect(self.romovlin1)
+        self.tableWidget.itemChanged.connect(self.count_non_empty_cells)
+        self.tableWidget_2.itemChanged.connect(self.count_non_empty_cells1)
 
+    def count_non_empty_cells1(self):
+        # Compter le nombre de cellules non vides dans la colonne 0
+        count = 0
+        ENGINS =0
+        RBN = 0
+        SDFM = 0
+        COL = 0
+        total = 0
+        for row in range(self.tableWidget_2.rowCount()):
+            item = self.tableWidget_2.item(row, 0)
+            item1 = self.tableWidget_2.item(row, 2)
+            if item is not None and item.text().strip() != "" :  # Vérifier si l'élément n'est pas None et n'est pas vide
+                count += 1  # Vérifier si la cellule n'est pas vide
+                try:
+                    value = int(item.text())  # Convertissez la valeur en entier
+                    if 200 < value < 300:
+                        RBN += 1
+                    elif 100 < value < 200:
+                        SDFM += 1
+                except ValueError:
+                    # Gérer l'erreur si la valeur de la cellule n'est pas un entier valide
+                    pass
+            if (item is not None and item.text().strip() != "") and (item1 is not None and item1.text().strip() != ""):  # Vérifier si l'élément n'est pas None et n'est pas vide
+                count -= 1 
+            if (item is not None and item.text().strip() == "") and (item1 is not None and item1.text().strip() != ""):  # Vérifier si l'élément n'est pas None et n'est pas vide
+                count += 1 
+        total = count - COL
+        self.lineEdit_11.setText(str(total))
+        self.lineEdit_12.setText(str(SDFM))
+        self.lineEdit_13.setText(str(RBN))
+        self.lineEdit_9.setText(str(COL))
+        self.lineEdit_8.setText(str(ENGINS))
+    
+    def count_non_empty_cells(self):
+        # Compter le nombre de cellules non vides dans la colonne 0
+        count = 0
+        ENGINS =0
+        RBN = 0
+        SDFM = 0
+        COL = 0
+        total = 0
+        for row in range(self.tableWidget.rowCount()):
+            item = self.tableWidget.item(row, 0)
+            item1 = self.tableWidget.item(row, 2)
+            if item is not None and item.text().strip() != "" :  # Vérifier si l'élément n'est pas None et n'est pas vide
+                count += 1  # Vérifier si la cellule n'est pas vide
+                try:
+                    value = int(item.text())  # Convertissez la valeur en entier
+                    if 200 < value < 300:
+                        RBN += 1
+                    elif 100 < value < 200:
+                        SDFM += 1
+                except ValueError:
+                    # Gérer l'erreur si la valeur de la cellule n'est pas un entier valide
+                    pass
+            if item1 is not None and item1.text().strip() != "" :  # Vérifier si l'élément n'est pas None et n'est pas vide
+                count += 1 
+
+        total = count - COL
+        self.lineEdit_11.setText(str(total))
+        self.lineEdit_2.setText(str(SDFM))
+        self.lineEdit_3.setText(str(RBN))
+        self.lineEdit_5.setText(str(COL))
+        self.lineEdit_6.setText(str(ENGINS))
+
+        # Afficher le nombre dans le QLineEdit
+        self.lineEdit_4.setText(str(count))
+    
+    def romovlin1(self):
+        selected_row = self.tableWidget_2.currentRow()  # Obtenez le numéro de la ligne sélectionnée
+        if selected_row >= 0:
+            self.tableWidget_2.removeRow(selected_row)
+    
+    def addlin1(self):
+        row = self.tableWidget_2.rowCount()
+        self.tableWidget_2.insertRow(row)
+
+    def romovlin(self):
+        selected_row = self.tableWidget.currentRow()  # Obtenez le numéro de la ligne sélectionnée
+        if selected_row >= 0:
+            self.tableWidget.removeRow(selected_row)
+    
+    def addlin(self):
+        row = self.tableWidget.rowCount()
+        self.tableWidget.insertRow(row)
     
     def output_file(self):
         import openpyxl
