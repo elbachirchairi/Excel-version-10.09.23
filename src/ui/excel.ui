@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>988</width>
-    <height>782</height>
+    <height>773</height>
    </rect>
   </property>
   <property name="font">
@@ -16,11 +16,14 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>Excel  version-9.23.29</string>
+   <string>Excel  version-10.09.23</string>
   </property>
   <property name="windowIcon">
    <iconset>
     <normaloff>../img/exceller (1).png</normaloff>../img/exceller (1).png</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>2.000000000000000</double>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_9">
@@ -87,186 +90,7 @@
              <property name="checkable">
               <bool>false</bool>
              </property>
-             <layout class="QGridLayout" name="gridLayout_3">
-              <item row="1" column="0">
-               <widget class="QLabel" name="label_17">
-                <property name="font">
-                 <font>
-                  <family>MS Shell Dlg 2</family>
-                  <pointsize>8</pointsize>
-                  <weight>50</weight>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-                <property name="text">
-                 <string>Fichier d'entrée : </string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QLineEdit" name="lineEdit_7">
-                <property name="font">
-                 <font>
-                  <family>MS Shell Dlg 2</family>
-                  <pointsize>8</pointsize>
-                  <weight>50</weight>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="readOnly">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="2">
-               <widget class="QToolButton" name="toolButton">
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normaloff>../img/exceller.png</normaloff>../img/exceller.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="0" colspan="3">
-               <widget class="QFrame" name="frame_6">
-                <property name="font">
-                 <font>
-                  <family>MS Shell Dlg 2</family>
-                  <pointsize>7</pointsize>
-                  <weight>50</weight>
-                  <bold>false</bold>
-                 </font>
-                </property>
-                <property name="toolTip">
-                 <string>Afichage</string>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true"/>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::Box</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Sunken</enum>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_5">
-                 <item row="0" column="0">
-                  <widget class="QTableWidget" name="tableWidget">
-                   <property name="font">
-                    <font>
-                     <family>Segoe UI</family>
-                     <pointsize>9</pointsize>
-                     <weight>50</weight>
-                     <bold>false</bold>
-                    </font>
-                   </property>
-                   <property name="toolTip">
-                    <string/>
-                   </property>
-                   <property name="layoutDirection">
-                    <enum>Qt::LeftToRight</enum>
-                   </property>
-                   <property name="styleSheet">
-                    <string notr="true">border-top-color: rgb(156, 154, 161);
-border-right-color: rgb(255, 255, 127);
-gridline-color: rgb(141, 141, 141);
-selection-background-color: rgb(225, 0, 0);
-alternate-background-color: rgb(255,248,220);</string>
-                   </property>
-                   <property name="locale">
-                    <locale language="French" country="Morocco"/>
-                   </property>
-                   <property name="frameShape">
-                    <enum>QFrame::NoFrame</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Plain</enum>
-                   </property>
-                   <property name="lineWidth">
-                    <number>0</number>
-                   </property>
-                   <property name="midLineWidth">
-                    <number>0</number>
-                   </property>
-                   <property name="horizontalScrollBarPolicy">
-                    <enum>Qt::ScrollBarAlwaysOff</enum>
-                   </property>
-                   <property name="sizeAdjustPolicy">
-                    <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
-                   </property>
-                   <property name="dragEnabled">
-                    <bool>false</bool>
-                   </property>
-                   <property name="defaultDropAction">
-                    <enum>Qt::LinkAction</enum>
-                   </property>
-                   <property name="alternatingRowColors">
-                    <bool>true</bool>
-                   </property>
-                   <property name="selectionMode">
-                    <enum>QAbstractItemView::ExtendedSelection</enum>
-                   </property>
-                   <property name="gridStyle">
-                    <enum>Qt::CustomDashLine</enum>
-                   </property>
-                   <property name="sortingEnabled">
-                    <bool>true</bool>
-                   </property>
-                   <property name="rowCount">
-                    <number>0</number>
-                   </property>
-                   <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-                    <bool>true</bool>
-                   </attribute>
-                   <attribute name="horizontalHeaderStretchLastSection">
-                    <bool>true</bool>
-                   </attribute>
-                   <attribute name="verticalHeaderCascadingSectionResizes">
-                    <bool>false</bool>
-                   </attribute>
-                   <attribute name="verticalHeaderShowSortIndicator" stdset="0">
-                    <bool>false</bool>
-                   </attribute>
-                   <attribute name="verticalHeaderStretchLastSection">
-                    <bool>false</bool>
-                   </attribute>
-                   <column>
-                    <property name="text">
-                     <string>N° MAFI</string>
-                    </property>
-                    <property name="textAlignment">
-                     <set>AlignCenter</set>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>N° REMORQUE</string>
-                    </property>
-                   </column>
-                   <column>
-                    <property name="text">
-                     <string>OBSERVATIONS</string>
-                    </property>
-                   </column>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
+             <layout class="QGridLayout" name="gridLayout_6">
               <item row="0" column="0" colspan="3">
                <widget class="QFrame" name="frame">
                 <property name="maximumSize">
@@ -735,6 +559,212 @@ color: rgb(0, 0, 0);</string>
                 </layout>
                </widget>
               </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_17">
+                <property name="font">
+                 <font>
+                  <family>MS Shell Dlg 2</family>
+                  <pointsize>8</pointsize>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <property name="text">
+                 <string>Fichier d'entrée : </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="lineEdit_7">
+                <property name="font">
+                 <font>
+                  <family>MS Shell Dlg 2</family>
+                  <pointsize>8</pointsize>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QToolButton" name="toolButton">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset>
+                  <normaloff>../img/exceller.png</normaloff>../img/exceller.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="3">
+               <widget class="QFrame" name="frame_6">
+                <property name="font">
+                 <font>
+                  <family>MS Shell Dlg 2</family>
+                  <pointsize>7</pointsize>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="toolTip">
+                 <string>Afichage</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Sunken</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_3">
+                 <item row="0" column="0" colspan="3">
+                  <widget class="QTableWidget" name="tableWidget">
+                   <property name="font">
+                    <font>
+                     <family>Segoe UI</family>
+                     <pointsize>9</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                   <property name="toolTip">
+                    <string/>
+                   </property>
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border-top-color: rgb(156, 154, 161);
+border-right-color: rgb(255, 255, 127);
+gridline-color: rgb(141, 141, 141);
+selection-background-color: rgb(225, 0, 0);
+alternate-background-color: rgb(255,248,220);</string>
+                   </property>
+                   <property name="locale">
+                    <locale language="French" country="Morocco"/>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::Panel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Sunken</enum>
+                   </property>
+                   <property name="lineWidth">
+                    <number>0</number>
+                   </property>
+                   <property name="midLineWidth">
+                    <number>0</number>
+                   </property>
+                   <property name="horizontalScrollBarPolicy">
+                    <enum>Qt::ScrollBarAlwaysOff</enum>
+                   </property>
+                   <property name="sizeAdjustPolicy">
+                    <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+                   </property>
+                   <property name="dragEnabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="defaultDropAction">
+                    <enum>Qt::LinkAction</enum>
+                   </property>
+                   <property name="alternatingRowColors">
+                    <bool>true</bool>
+                   </property>
+                   <property name="selectionMode">
+                    <enum>QAbstractItemView::ExtendedSelection</enum>
+                   </property>
+                   <property name="gridStyle">
+                    <enum>Qt::CustomDashLine</enum>
+                   </property>
+                   <property name="sortingEnabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="rowCount">
+                    <number>0</number>
+                   </property>
+                   <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                    <bool>true</bool>
+                   </attribute>
+                   <attribute name="horizontalHeaderStretchLastSection">
+                    <bool>true</bool>
+                   </attribute>
+                   <attribute name="verticalHeaderCascadingSectionResizes">
+                    <bool>false</bool>
+                   </attribute>
+                   <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+                    <bool>false</bool>
+                   </attribute>
+                   <attribute name="verticalHeaderStretchLastSection">
+                    <bool>false</bool>
+                   </attribute>
+                   <column>
+                    <property name="text">
+                     <string>N° MAFI</string>
+                    </property>
+                    <property name="textAlignment">
+                     <set>AlignCenter</set>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>N° REMORQUE</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>OBSERVATIONS</string>
+                    </property>
+                   </column>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <spacer name="horizontalSpacer_3">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>253</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QPushButton" name="pushButton_2">
+                   <property name="text">
+                    <string>Romove line</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QPushButton" name="pushButton">
+                   <property name="text">
+                    <string>Add line</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
              </layout>
             </widget>
            </item>
@@ -764,7 +794,7 @@ color: rgb(0, 0, 0);</string>
              <property name="checkable">
               <bool>false</bool>
              </property>
-             <layout class="QGridLayout" name="gridLayout_6">
+             <layout class="QGridLayout" name="gridLayout_5">
               <item row="0" column="0" colspan="3">
                <widget class="QFrame" name="frame_2">
                 <property name="maximumSize">
@@ -1286,7 +1316,7 @@ color: rgb(0, 0, 0);</string>
                  <enum>QFrame::Sunken</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_4">
-                 <item row="0" column="0">
+                 <item row="0" column="0" colspan="3">
                   <widget class="QTableWidget" name="tableWidget_2">
                    <property name="font">
                     <font>
@@ -1313,10 +1343,10 @@ alternate-background-color: rgb(255,248,220);</string>
                     <locale language="French" country="Morocco"/>
                    </property>
                    <property name="frameShape">
-                    <enum>QFrame::NoFrame</enum>
+                    <enum>QFrame::Panel</enum>
                    </property>
                    <property name="frameShadow">
-                    <enum>QFrame::Plain</enum>
+                    <enum>QFrame::Sunken</enum>
                    </property>
                    <property name="lineWidth">
                     <number>0</number>
@@ -1384,6 +1414,33 @@ alternate-background-color: rgb(255,248,220);</string>
                      <string>OBSERVATIONS</string>
                     </property>
                    </column>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <spacer name="horizontalSpacer_4">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>253</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QPushButton" name="pushButton_3">
+                   <property name="text">
+                    <string>Romove line</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QPushButton" name="pushButton_4">
+                   <property name="text">
+                    <string>Add line</string>
+                   </property>
                   </widget>
                  </item>
                 </layout>
@@ -1454,7 +1511,7 @@ alternate-background-color: rgb(255,248,220);</string>
      <x>0</x>
      <y>0</y>
      <width>988</width>
-     <height>21</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFichier">
