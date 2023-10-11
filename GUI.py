@@ -32,6 +32,7 @@ import datetime
 import numpy as np
 import os
 from src.py.navire import navire
+from src.py.flata import flata
 from PyQt5.uic import loadUi
 from openpyxl.workbook import Workbook
 import os
@@ -64,6 +65,7 @@ class MyApp(QtWidgets.QMainWindow):
         self.dateEdit_3.setDate(current_date)
         self.comboBox.currentIndexChanged.connect(self.navir)
         self.actionAjouter_navire.triggered.connect(self.add_navire)
+        self.actionFata.triggered.connect(self.flata)
         self.actionClear.triggered.connect(self.CLEAR)
         self.toolButton.clicked.connect(self.input_file)
         self.toolButton_2.clicked.connect(self.input_file1)
@@ -122,34 +124,36 @@ class MyApp(QtWidgets.QMainWindow):
         for row in range(self.tableWidget.rowCount()):
             item = self.tableWidget.item(row, 0)
             item1 = self.tableWidget.item(row, 2)
-            if item is not None and item.text().strip() != "" :  # Vérifier si l'élément n'est pas None et n'est pas vide
-                count += 1  # Vérifier si la cellule n'est pas vide
+            item3 = self.tableWidget.item(row, 1)
+            if (item is not None and item.text().strip() != "") or (item1 is not None and item1.text().strip() != ""):
+                # Au moins l'un des éléments n'est pas vide
+                count += 1
+
                 try:
                     value = int(item.text())  # Convertissez la valeur en entier
                     if 200 < value < 300:
                         RBN += 1
                     elif 100 < value < 200:
                         SDFM += 1
+
                 except ValueError:
                     # Gérer l'erreur si la valeur de la cellule n'est pas un entier valide
                     pass
-            if item1 is not None and item1.text().strip() != "" :  # Vérifier si l'élément n'est pas None et n'est pas vide
-                count += 1 
+            elif item1 is not None and item1.text().strip() != "":
+                count += 1
+
 
         total = count - COL
-        self.lineEdit_11.setText(str(total))
+        self.lineEdit_4.setText(str(total))
         self.lineEdit_2.setText(str(SDFM))
         self.lineEdit_3.setText(str(RBN))
         self.lineEdit_5.setText(str(COL))
         self.lineEdit_6.setText(str(ENGINS))
-
-        # Afficher le nombre dans le QLineEdit
-        self.lineEdit_4.setText(str(count))
-    
     def romovlin1(self):
         selected_row = self.tableWidget_2.currentRow()  # Obtenez le numéro de la ligne sélectionnée
         if selected_row >= 0:
             self.tableWidget_2.removeRow(selected_row)
+        self.count_non_empty_cells1()
     
     def addlin1(self):
         row = self.tableWidget_2.rowCount()
@@ -159,6 +163,7 @@ class MyApp(QtWidgets.QMainWindow):
         selected_row = self.tableWidget.currentRow()  # Obtenez le numéro de la ligne sélectionnée
         if selected_row >= 0:
             self.tableWidget.removeRow(selected_row)
+        self.count_non_empty_cells()
     
     def addlin(self):
         row = self.tableWidget.rowCount()
@@ -673,8 +678,50 @@ class MyApp(QtWidgets.QMainWindow):
         self.lineEdit_11.setText("0")
         self.lineEdit_12.setText("0")
         self.lineEdit_13.setText("0")
+        self.lineEdit_16.setText("")
+        self.lineEdit_17.setText("")
+        self.lineEdit_7.setText("")
+        self.lineEdit_14.setText("")
+        self.lineEdit_15.setText("")
         self.lineEdit_10.setText(" Nom & Prénom de l'agent pointeur : ")
         self.lineEdit.setText(" Nom & Prénom de l'agent pointeur : ")
+        current_date = QDate.currentDate()
+        self.dateEdit_2.setDate(current_date)
+        self.dateEdit_3.setDate(current_date)
+        #/////////////////
+        self.timeEdit_4.setDisplayFormat("'ETA' :                      HH'H'mm")
+        time = self.timeEdit_4.time()
+        time.setHMS(0, 0, 0)
+        self.timeEdit_4.setTime(time)
+        self.timeEdit_4.setDisplayFormat("'RTA :'                      HH'H'mm")
+        time1 = self.timeEdit_5.time()
+        time1.setHMS(0, 0, 0)
+        self.timeEdit_5.setTime(time1)
+        self.timeEdit_6.setDisplayFormat("'HEURE DEBUT DE DECHARGEMENT: 'HH'H'mm")
+        time2 = self.timeEdit_6.time()
+        time2.setHMS(0, 0, 0)
+        self.timeEdit_6.setTime(time2)
+        self.timeEdit_7.setDisplayFormat("'HEURE FIN DE DECHARGEMENT:' HH'H'mm")
+        time3 = self.timeEdit_7.time()
+        time3.setHMS(0, 0, 0)
+        self.timeEdit_7.setTime(time3)
+        # /////////////////
+        self.timeEdit_8.setDisplayFormat("'ETD' :                      HH'H'mm")
+        time4 = self.timeEdit_8.time()
+        time4.setHMS(0, 0, 0)
+        self.timeEdit_8.setTime(time4)
+        self.timeEdit_11.setDisplayFormat("'RTD :'                      HH'H'mm")
+        time5 = self.timeEdit_11.time()
+        time5.setHMS(0, 0, 0)
+        self.timeEdit_11.setTime(time5)
+        self.timeEdit_9.setDisplayFormat("'HEURE DEBUT DE CHARGEMENT: 'HH'H'mm")
+        time6 = self.timeEdit_9.time()
+        time6.setHMS(0, 0, 0)
+        self.timeEdit_9.setTime(time6)
+        self.timeEdit_10.setDisplayFormat("'HEURE FIN DE CHARGEMENT :' HH'H'mm")
+        time7 = self.timeEdit_10.time()
+        time7.setHMS(0, 0, 0)
+        self.timeEdit_10.setTime(time7)
 
     def update_navire_list(self):
         # mise à jour de la comboBox avec les navires existants
@@ -691,6 +738,11 @@ class MyApp(QtWidgets.QMainWindow):
         self.Navire = navire(parent=self)
         # self.Navire.accepted.connect(self.update_navire_list)
         self.Navire.show()
+
+    def flata(self):
+        self.flata = flata(parent=self)
+        # self.Navire.accepted.connect(self.update_navire_list)
+        self.flata.show()
 
     def navir(self):
         navire = self.comboBox.currentText()
