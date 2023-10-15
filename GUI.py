@@ -79,6 +79,73 @@ class MyApp(QtWidgets.QMainWindow):
         self.pushButton_3.clicked.connect(self.romovlin1)
         self.tableWidget.itemChanged.connect(self.count_non_empty_cells)
         self.tableWidget_2.itemChanged.connect(self.count_non_empty_cells1)
+        self.lineEdit_5.textChanged.connect(self.COLLTOTAL)
+        self.lineEdit_2.textChanged.connect(self.sdfminport)
+        self.lineEdit_3.textChanged.connect(self.rbninport)
+        
+        self.lineEdit_9.textChanged.connect(self.COLLTOTAL1)
+        self.lineEdit_12.textChanged.connect(self.sdfminport1)
+        self.lineEdit_13.textChanged.connect(self.rbninport1)
+    def rbninport1(self):
+        total=int(self.lineEdit_11.text())
+        coll = int(self.lineEdit_9.text())
+        #SDFM=int(self.lineEdit_2.text())
+        if self.lineEdit_13.text() != "":
+            RBN=int(self.lineEdit_13.text())
+        else:
+            RBN=0
+        COL=int(self.lineEdit_8.text())
+        self.lineEdit_12.setText(str((total+coll)-RBN))
+    def sdfminport1(self):
+        coll = int(self.lineEdit_9.text())
+        total=int(self.lineEdit_11.text())
+        if self.lineEdit_12.text() != "":
+            SDFM=int(self.lineEdit_12.text())
+        else:
+            SDFM = 0
+        #RBN=int(self.lineEdit_3.text())
+        COL=int(self.lineEdit_8.text())
+        self.lineEdit_13.setText(str((total+coll)-SDFM))
+    def COLLTOTAL1(self):
+        #total = int(self.lineEdit_4.text())
+        SDFM=int(self.lineEdit_12.text())
+        RBN=int(self.lineEdit_13.text())
+        if self.lineEdit_9.text()!="":
+            coll = int(self.lineEdit_9.text())
+        else:
+            coll = 0
+        self.lineEdit_11.setText(str((SDFM+RBN)-coll))
+        
+    #//////////////////////////////////////
+    def rbninport(self):
+        total=int(self.lineEdit_4.text())
+        #SDFM=int(self.lineEdit_2.text())
+        if self.lineEdit_3.text() != "":
+            RBN=int(self.lineEdit_3.text())
+        else:
+            RBN=0
+        COL=int(self.lineEdit_5.text())
+        self.lineEdit_2.setText(str((total+COL)-RBN))
+    def sdfminport(self):
+        total=int(self.lineEdit_4.text())
+        if self.lineEdit_2.text() != "":
+            SDFM=int(self.lineEdit_2.text())
+        else:
+            SDFM = 0
+        #RBN=int(self.lineEdit_3.text())
+        COL=int(self.lineEdit_5.text())
+        self.lineEdit_3.setText(str((total+COL)-SDFM))
+    def COLLTOTAL(self):
+        #total = int(self.lineEdit_4.text())
+        SDFM=int(self.lineEdit_2.text())
+        RBN=int(self.lineEdit_3.text())
+        if self.lineEdit_5.text()!="":
+            coll = int(self.lineEdit_5.text())
+        else:
+            coll = 0
+        self.lineEdit_4.setText(str((SDFM+RBN)-coll))
+        
+        
 
     def count_non_empty_cells1(self):
         # Compter le nombre de cellules non vides dans la colonne 0
@@ -92,20 +159,20 @@ class MyApp(QtWidgets.QMainWindow):
             item = self.tableWidget_2.item(row, 0)
             item1 = self.tableWidget_2.item(row, 2)
             if item is not None and item.text().strip() != "" :  # Vérifier si l'élément n'est pas None et n'est pas vide
-                count += 1  # Vérifier si la cellule n'est pas vide
-                try:
-                    value = int(item.text())  # Convertissez la valeur en entier
-                    if 200 < value < 300:
-                        RBN += 1
-                    elif 100 < value < 200:
-                        SDFM += 1
-                except ValueError:
-                    # Gérer l'erreur si la valeur de la cellule n'est pas un entier valide
-                    pass
-            if (item is not None and item.text().strip() != "") and (item1 is not None and item1.text().strip() != ""):  # Vérifier si l'élément n'est pas None et n'est pas vide
-                count -= 1 
-            if (item is not None and item.text().strip() == "") and (item1 is not None and item1.text().strip() != ""):  # Vérifier si l'élément n'est pas None et n'est pas vide
-                count += 1 
+                count += 1
+
+                if item is not None:
+                    try:
+                        value = int(item.text())  # Convertissez la valeur en entier
+                        if 200 < value < 300:
+                            RBN += 1
+                        elif 100 < value < 200:
+                            SDFM += 1
+                    except ValueError:
+                        # Gérer l'erreur si la valeur de la cellule n'est pas un entier valide
+                        pass
+            elif item1 is not None and (item is None or item.text().strip() == ""):
+                count += 1
         total = count - COL
         self.lineEdit_11.setText(str(total))
         self.lineEdit_12.setText(str(SDFM))
@@ -129,17 +196,19 @@ class MyApp(QtWidgets.QMainWindow):
                 # Au moins l'un des éléments n'est pas vide
                 count += 1
 
-                try:
-                    value = int(item.text())  # Convertissez la valeur en entier
-                    if 200 < value < 300:
-                        RBN += 1
-                    elif 100 < value < 200:
-                        SDFM += 1
-
-                except ValueError:
-                    # Gérer l'erreur si la valeur de la cellule n'est pas un entier valide
-                    pass
-            elif item1 is not None and item1.text().strip() != "":
+                if item is not None:
+                    try:
+                        value = int(item.text())  # Convertissez la valeur en entier
+                        if 200 < value < 300:
+                            RBN += 1
+                        elif 100 < value < 200:
+                            SDFM += 1
+                    except ValueError:
+                        # Gérer l'erreur si la valeur de la cellule n'est pas un entier valide
+                        pass
+            elif item1 is not None and (item is None or item.text().strip() == ""):
+                if item1 is not None and (item3 is None or item3.text().strip() == ""):
+                    QMessageBox.warning(self, 'Attention', 'Ajouter la romorque d\'attention.')
                 count += 1
 
 
@@ -537,6 +606,7 @@ class MyApp(QtWidgets.QMainWindow):
 
 
     def input_file1(self):
+        self.tableWidget_2.setRowCount(0)
         self.filepath = QtWidgets.QFileDialog.getOpenFileName(self, "Select excel File", "~", "*.xlsx;;All Files(*)")[0]
         if self.filepath == "":
             pass
@@ -600,6 +670,7 @@ class MyApp(QtWidgets.QMainWindow):
         self.lineEdit_8.setText(str(ENGINS))
 
     def input_file(self):
+        self.tableWidget.setRowCount(0)
         self.filepath = QtWidgets.QFileDialog.getOpenFileName(self, "Select excel File", "~", "*.xlsx;;All Files(*)")[0]
         if self.filepath == "":
             pass
